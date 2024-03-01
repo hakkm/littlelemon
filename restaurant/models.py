@@ -13,6 +13,7 @@ class Booking(models.Model):
 
 class Menu(models.Model):
     name = models.CharField(max_length=200)
+    description = models.TextField(max_length=1000, default="")
     price = models.IntegerField()
 
     def __str__(self):
