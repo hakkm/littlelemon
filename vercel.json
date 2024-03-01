@@ -11,6 +11,14 @@
       "config": {
         "distDir": "staticfiles_build"
       }
+    },
+    {
+      "src": "restaurant/**",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "restaurant/static/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -19,8 +27,8 @@
       "dest": "littlelemon/wsgi.py"
     },
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
+      "src": "/restaurant/static/(.*)",
+      "dest": "/restaurant/static/$1"
     }
   ]
 }
